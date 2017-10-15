@@ -75,9 +75,11 @@ export default class App extends Component {
 - (optional)`imageWidth`: custom image width, other than natural
 - (optional)`imageHeight`: custom image height, other than natural
 
+## Example App
+> [Example App](https://github.com/pradeep1991singh/ImageColorPickerExampleApp)
+
 ## TODO
 
-- Add demo app
 - Support Image picker gallery
 
 ## Contributing
