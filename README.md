@@ -1,6 +1,6 @@
 
 # react-native-image-color-picker
-Image color picker: Provide image source provided and it will return 
+Image color picker: Provide image source and it will return 
 - Different color palettes out of image 
 - Average color palette out of image
 
@@ -10,7 +10,15 @@ Peer dependency
 
 ```sh
 $ npm install react-native-fetch-blob --save
+```
+or
 
+```sh
+$ yarn add react-native-image-color-picker --save
+```
+then
+
+```sh
 $ react-native link react-native-fetch-blob
 ```
 
@@ -35,7 +43,7 @@ export default class App extends Component {
 
   pickerCallback = message => {
     if (message && message.nativeEvent && message.nativeEvent.data) {
-			console.log(message.nativeEvent.data); // response from ImageColorPicker
+      console.log(message.nativeEvent.data); // response from ImageColorPicker
     }
   };
 
