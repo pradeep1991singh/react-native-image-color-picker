@@ -1,6 +1,6 @@
 {
   "name": "react-native-image-color-picker",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description":
     "Image color picker based on image source provided and return image different color palettes or average color palette",
   "main": "src/index.js",
@@ -12,7 +12,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "react-native-image-color-picker"
+    "url":
+      "git+https://github.com/pradeep1991singh/react-native-image-color-picker.git"
   },
   "keywords": [
     "image-color-picker",
@@ -27,7 +28,9 @@
   ],
   "author": "pradeep1991singh",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "react-native-fetch-blob": "^0.10.8"
+  },
   "jest": {
     "preset": "react-native",
     "transformIgnorePatterns": [
@@ -41,16 +44,12 @@
     "prettier": "^1.7.4",
     "react": "^16.0.0",
     "react-native": "^0.49.3",
-    "react-test-renderer": "^16.0.0",
-    "react-native-fetch-blob": "^0.10.8"
+    "react-test-renderer": "^16.0.0"
   },
   "lint-staged": {
     "src/**/*.js": [
       "prettier --single-quote --trailing-comma es5 --write",
       "git add"
     ]
-  },
-  "peerDependencies": {
-    "react-native-fetch-blob": "^0.10.8"
   }
 }
