@@ -1,6 +1,6 @@
 {
   "name": "react-native-image-color-picker",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description":
     "Image color picker based on image source provided and return image different color palettes or average color palette",
   "main": "src/index.js",

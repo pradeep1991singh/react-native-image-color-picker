@@ -72,6 +72,8 @@ export default class App extends Component {
 - (optional)`defaultPalette`: default color palette `Default value: [0, 0, 0, 1]`
 - (optional)`colorType`: color code type e.g. rgba or hex `Default value: rgba`
 - (optional)`pickerStyle`: picker container styles
+- (optional)`imageWidth`: custom image width, other than natural
+- (optional)`imageHeight`: custom image height, other than natural
 
 ## TODO
 

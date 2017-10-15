@@ -144,6 +144,8 @@ export const canvasHtml = (imageBlob, options) => {
       </script>
       <body>
         <img src='data:image/${options.imageType};base64,${imageBlob}' 
+          width='${options.imageWidth}px'
+          height='${options.imageHeight}px'
           id='__colorPickerCanvasImage' 
           onload='getColorPalettes(${optionsString})'/>
       </body>
