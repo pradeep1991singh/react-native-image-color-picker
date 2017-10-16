@@ -6,24 +6,6 @@ Image color picker: Provide image source and it will return
 
 ## Getting started
 
-Peer dependency
-
-```sh
-$ npm install react-native-fetch-blob --save
-```
-or
-
-```sh
-$ yarn add react-native-image-color-picker --save
-```
-then
-
-```sh
-$ react-native link react-native-fetch-blob
-```
-
-Package 
-
 ```sh
 $ npm install react-native-image-color-picker --save
 ```
