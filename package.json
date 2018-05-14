@@ -1,19 +1,16 @@
 {
   "name": "react-native-image-color-picker",
-  "version": "1.0.3",
-  "description":
-    "Image color picker based on image source provided and return image different color palettes or average color palette",
+  "version": "1.0.4",
+  "description": "Image color picker based on image source provided and return image different color palettes or average color palette",
   "main": "src/index.js",
   "scripts": {
     "test": "jest",
     "precommit": "lint-staged && npm test",
-    "prettify":
-      "prettier --single-quote --trailing-comma es5 --write 'src/**/*.js'"
+    "prettify": "prettier --single-quote --trailing-comma es5 --write 'src/**/*.js'"
   },
   "repository": {
     "type": "git",
-    "url":
-      "git+https://github.com/pradeep1991singh/react-native-image-color-picker.git"
+    "url": "git+https://github.com/pradeep1991singh/react-native-image-color-picker.git"
   },
   "keywords": [
     "image-color-picker",
@@ -29,6 +26,7 @@
   "author": "pradeep1991singh",
   "license": "ISC",
   "dependencies": {
+    "image-color-picker": "^1.0.0",
     "react-native-fetch-blob": "^0.10.8"
   },
   "jest": {
@@ -36,7 +34,9 @@
     "transformIgnorePatterns": [
       "node_modules/(?!(jest-)?react-native|react-navigation|jest-fetch-mock)"
     ],
-    "setupFiles": ["<rootDir>/__mocks__/setup.js"]
+    "setupFiles": [
+      "<rootDir>/__mocks__/setup.js"
+    ]
   },
   "devDependencies": {
     "jest": "^21.2.1",
