@@ -18,7 +18,7 @@ $ yarn add react-native-image-color-picker --save
 and
 
 ```sh
-$ react-native link image-color-picker (for android)
+$ react-native link image-color-picker #(for android)
 ```
 
 ## Usage
