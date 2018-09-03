@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { WebView, Platform } from 'react-native'
-import RNFetchBlob from 'react-native-fetch-blob';
+import RNFetchBlob from 'rn-fetch-blob';
 import RNImageColorPicker from 'image-color-picker'
 import { canvasHtml } from './canvas-html';
 
