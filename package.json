@@ -27,7 +27,8 @@
   "license": "ISC",
   "dependencies": {
     "image-color-picker": "^1.0.0",
-    "rn-fetch-blob": "^0.10.13"
+    "rn-fetch-blob": "^0.10.13",
+    "react-native-webview": "^5.8.1"
   },
   "jest": {
     "preset": "react-native",
