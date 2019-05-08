@@ -35,7 +35,7 @@ export const canvasHtml = (imageBlob, options) => {
         else
           palette = getDominantPalettes(getAllPalettes(imageWidth, imageHeight, canvasContext), paletteCount, colorType);
   
-        window.postMessage(JSON.stringify({'message':'imageColorPicker','payload':palette}));        
+        window.ReactNativeWebView.postMessage(JSON.stringify({'message':'imageColorPicker','payload':palette}));        
       }
   
       function getAveragePalette({imageWidth, imageHeight, canvasContext, colorType = 'rgb'}) {

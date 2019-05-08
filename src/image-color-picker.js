@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { WebView, Platform } from 'react-native'
-import RNFetchBlob from 'react-native-fetch-blob';
+import { Platform } from 'react-native'
+import { WebView } from 'react-native-webview';
+import RNFetchBlob from 'rn-fetch-blob';
 import RNImageColorPicker from 'image-color-picker'
 import { canvasHtml } from './canvas-html';
 
@@ -14,7 +15,8 @@ export default class ImageColorPicker extends Component {
   };
 
   componentWillMount() {
-    this.getImage(this.props.imageUrl);
+    if (this.props.imageUrl)
+      this.getImage(this.props.imageUrl);
   }
 
   getImage = async imageUrl => {
@@ -49,14 +51,15 @@ export default class ImageColorPicker extends Component {
   };
 
   render() {
-    const { imageUrl, pickerCallback, pickerStyle } = this.props;
+    const { pickerCallback, pickerStyle } = this.props;
 
     return (
       <WebView
+        originWhitelist={['*']}
         ref={imageColorPickerView => (this.imageColorPickerView = imageColorPickerView)}
         source={{ html: canvasHtml(this.state.imageBlob, this.props) }}
         javaScriptEnabled={true}
-        onMessage={pickerCallback}
+        onMessage={event => { pickerCallback(event); } }
         style={pickerStyle}
       />
     );
