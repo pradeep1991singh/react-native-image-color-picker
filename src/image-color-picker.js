@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { Platform } from 'react-native'
 import { WebView } from 'react-native-webview';
 import RNFetchBlob from 'rn-fetch-blob';
-import RNImageColorPicker from 'image-color-picker'
+import RNImageColorPicker from 'image-color-picker';
+import { ImageCacheManager } from 'react-native-cached-image';
 import { canvasHtml } from './canvas-html';
 
 async function getColor(imagePath) {
@@ -22,15 +23,13 @@ export default class ImageColorPicker extends Component {
   getImage = async imageUrl => {
     try {
 
-      const localImage = await RNFetchBlob.config({ fileCache: true }).fetch(
-        'GET',
-        imageUrl
-      )
+      let imageCacheManager = ImageCacheManager({});
+      let localImagePath = await imageCacheManager.downloadAndCacheUrl(imageUrl, {});
 
       // if we are on Android, then use native for Android
       if (Platform.OS === 'android') {
         let colors = [];
-        const color = await getColor(localImage.path());
+        const color = await getColor(localImagePath);
         color.forEach(c => {
           colors.push(c.split('-'));
         });
@@ -41,7 +40,7 @@ export default class ImageColorPicker extends Component {
       }
 
       const base64EncodedImage = await RNFetchBlob.fs.readFile(
-        localImage.path(),
+        localImagePath,
         'base64'
       );
       this.setState({ imageBlob: base64EncodedImage });
