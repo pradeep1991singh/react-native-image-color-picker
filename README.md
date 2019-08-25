@@ -66,6 +66,10 @@ export default class App extends Component {
 ## Example App
 > [Example App](https://github.com/pradeep1991singh/ImageColorPickerExampleApp)
 
+## Demo
+
+> [Example App](https://colorpicker.stackskull.com)
+
 ## TODO
 
 - Support Image picker gallery
