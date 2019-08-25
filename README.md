@@ -68,7 +68,7 @@ export default class App extends Component {
 
 ## Demo
 
-> [Example App](https://colorpicker.stackskull.com)
+> [Demo](https://colorpicker.stackskull.com)
 
 ## TODO
 
