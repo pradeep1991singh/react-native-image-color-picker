@@ -15,7 +15,7 @@ export default class ImageColorPicker extends Component {
     imageBlob: ''
   };
 
-  componentWillMount() {
+  componentDidMount() {
     if (this.props.imageUrl)
       this.getImage(this.props.imageUrl);
   }
