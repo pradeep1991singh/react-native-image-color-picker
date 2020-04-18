@@ -77,3 +77,6 @@ export default class App extends Component {
 ## Contributing
 
 Interested in contributing to this repository? PR are most welcome!
+
+---
+[![Buy Me A Coffee](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/ps91)
